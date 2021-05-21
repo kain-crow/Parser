@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" 
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>simpleJSON</servlet-name>
+        <servlet-class>com.kain.parser.simpleJSON</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>tableJSON</servlet-name>
+        <servlet-class>com.kain.parser.tableJSON</servlet-class>
+    </servlet>
+
+  
+     <servlet-mapping>
+        <servlet-name>simpleJSON</servlet-name>
+        <url-pattern>/simpleJSON</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>tableJSON</servlet-name>
+        <url-pattern>/tableJSON</url-pattern>
+    </servlet-mapping>  
+    
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+        
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+</web-app>
